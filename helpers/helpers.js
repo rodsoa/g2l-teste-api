@@ -13,6 +13,16 @@ const genFakeVehiclesData = () => {
     return data;
 }
 
+const clean = (obj) => {
+    for (var propName in obj) { 
+        if (obj[propName] === null || obj[propName] === undefined) {
+            delete obj[propName];
+        }
+    }
+}
+
+
 module.exports = {
-  genFakeVehiclesData
+  genFakeVehiclesData,
+  clean
 };

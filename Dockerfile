@@ -4,7 +4,7 @@ WORKDIR /node-app
 
 COPY package.json .
 
-RUN npm install --quiet
+RUN npm install --force --quiet
 
 RUN npm install nodemon -g --quiet
 
